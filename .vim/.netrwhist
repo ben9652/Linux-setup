@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src/app/features/sections/main-section/purchases/new-purchase'
+let g:netrw_dirhist_5='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src/app/core/services/device-type'
+let g:netrw_dirhist_4='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src/app/core/services'
+let g:netrw_dirhist_3='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src/app/core'
+let g:netrw_dirhist_2='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src'
+let g:netrw_dirhist_1='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src/app/features/sections/main-section'
+let g:netrw_dirhist_0='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src/app/features/sections'
+let g:netrw_dirhist_9='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src/app/features'
+let g:netrw_dirhist_8='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src/app'
+let g:netrw_dirhist_7='/home/ben9652/boeris-creaciones/boeris-creaciones-frontend/src'
