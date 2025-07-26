@@ -2,30 +2,24 @@
 " Options
 " ========================================
 
+set t_Co=256
 set encoding=UTF-8
 set spelllang=en_us,de_de,es_es
 set nohlsearch " Disable highlight on search
 set number " Enable line numbers
-set breakindent " Enable break indent
 set undofile " Save undo history
-set ignorecase " Case-insensitive searching unless \C or capital in search
-set smartcase " Enable smart case
-set signcolumn=yes " Keep signcolumn on by default
 set updatetime=250 " Decrease update time
 set timeoutlen=300 " Time to wait for a mapped sequence to complete (in milliseconds)
 set nobackup " Don't create a backup file
 set nowritebackup " Don't write backup before overwriting
-set completeopt=menuone,noselect " Better completion experience
 set whichwrap+=<,>,[,],h,l " Allow certain keys to move to the next line
-set nowrap " Display long lines as one line
 set linebreak " Don't break words when wrapping
-set scrolloff=8 " Keep 8 lines above/below cursor
 set sidescrolloff=8 " Keep 8 columns to the left/right of cursor
 set relativenumber " Use relative line numbers
 set numberwidth=4 " Number column width
-set shiftwidth=4 " Spaces per indentation
-set tabstop=4 " Spaces per tab
-set softtabstop=4 " Spaces per tab during editing ops
+set shiftwidth=2 " Spaces per indentation
+set tabstop=2 " Spaces per tab
+set softtabstop=2 " Spaces per tab during editing ops
 set expandtab " Convert tabs to spaces
 set nocursorline " Don't highlight the current line
 set splitbelow " Horizontal splits below current window
@@ -50,6 +44,9 @@ set statusline+=/ " Separator
 set statusline+=%L " Total lines
 set gp=git\ grep\ -n
 set viminfo^=%  " Guarda buffers abiertos en el historial
+if has('termguicolors')
+  set termguicolors
+endif
 
 " ========================================
 " Keymaps
@@ -70,8 +67,8 @@ nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 
-" clear highlights
-nnoremap <Esc> :noh<CR>
+" clear highlights (en realidad esto no funciona y se pone en modo reemplazo)
+" nnoremap <Esc> :noh<CR>
 
 " save file
 nnoremap <C-s> :w<CR>
@@ -156,8 +153,7 @@ noremap <silent> <leader>e :Lex<CR>
 syntax on
 
 " Colorscheme
-" colorscheme industry
-colorscheme wildcharm
+colorscheme habamax
 set background=dark
 " hi Normal ctermbg=NONE guibg=NONE
 " hi NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
@@ -175,8 +171,6 @@ if system('uname -s') == "Darwin\n"
       let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
         endif
-        set termguicolors
-
         " Use a line cursor within insert mode and a block cursor everywhere else.
         let &t_SI = "\e[6 q"
         let &t_EI = "\e[2 q"
