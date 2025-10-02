@@ -60,10 +60,6 @@ let maplocalleader = " "
 nnoremap <Space> <Nop>
 vnoremap <Space> <Nop>
 
-" Allow moving the cursor through wrapped lines with j, k
-nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
-nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
-
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 
@@ -153,7 +149,7 @@ noremap <silent> <leader>e :Lex<CR>
 syntax on
 
 " Colorscheme
-colorscheme habamax
+colorscheme desert
 set background=dark
 " hi Normal ctermbg=NONE guibg=NONE
 " hi NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
